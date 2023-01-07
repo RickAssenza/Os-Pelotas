@@ -1,0 +1,26 @@
+fileFormatVersion: 2
+guid: 844732aaa708d4046bad12bd4395d44a
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - barravida: {instanceID: 0}
+  - enemieController: {instanceID: 0}
+  - tiro: {instanceID: 0}
+  - arma: {instanceID: 0}
+  - txttiros: {instanceID: 0}
+  - txtmoedas: {instanceID: 0}
+  - groudcheck: {instanceID: 0}
+  - saidortiro: {instanceID: 0}
+  - fumacaRoxa: {fileID: 8647206087429380305, guid: ae001431cf5eff84e88533f97bccfee6, type: 3}
+  - lh: {instanceID: 0}
+  - fxPrincipal: {instanceID: 0}
+  - fxTiro: {instanceID: 0}
+  - fxPuloInimigo: {instanceID: 0}
+  - fxJump: {instanceID: 0}
+  - hitPrefab: {fileID: 8647206087429380305, guid: ae001431cf5eff84e88533f97bccfee6, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

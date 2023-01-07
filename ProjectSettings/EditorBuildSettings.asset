@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Projeto/Scenes/MenuPrincipal.unity
+    guid: 9791b57e93934f347aea10737ba2ee74
+  - enabled: 1
+    path: Assets/Projeto/Scenes/Home.unity
+    guid: 6691cce8f7f54b6428c42cd1c77a8d1f
+  - enabled: 1
+    path: Assets/Projeto/Scenes/Primeira.unity
+    guid: 984fd9c708922864299252f149efaaec
+  - enabled: 1
+    path: Assets/Projeto/Scenes/Fase2.unity
+    guid: 2b845ba6cfb3aa844bcdc8b8de6a68d4
+  - enabled: 1
+    path: Assets/Projeto/Scenes/Fase3.unity
+    guid: 8862f4387c54bda47b52e771d207c203
+  - enabled: 1
+    path: Assets/Projeto/Scenes/Fase4.unity
+    guid: 8317b60dd194cc44e8febff82c35393d
+  - enabled: 1
+    path: Assets/Projeto/Scenes/FaseCinco.unity
+    guid: 522aca45eda7791409576f0faaab148f
+  - enabled: 1
+    path: Assets/Projeto/Scenes/Fase6.unity
+    guid: b34d4f82fad97314a9b91edd06292e9c
+  - enabled: 1
+    path: Assets/Projeto/Scenes/Quarto.unity
+    guid: 3e732d02d660c8a40ae21c245138dd6e
+  - enabled: 1
+    path: Assets/Projeto/Scenes/Tutor.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  m_configObjects: {}

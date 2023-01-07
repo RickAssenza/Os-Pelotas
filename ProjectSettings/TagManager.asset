@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - AddForce
+  - Plataforma
+  - Bala
+  - Inimigo
+  - Bloco
+  - Ground
+  - Gravidade
+  - BolckCamera
+  - Crazy
+  - Coletavel
+  - Armadilha
+  - Tijolo
+  - Espinho
+  - Portal
+  - Lanca
+  - fASE1
+  - Boss
+  - Morte
+  - Chave
+  - Portal2
+  - Foca
+  - Portal3
+  - Fase2
+  - Fase3
+  - Fase4
+  - Fase5
+  - Fase6
+  - Placa
+  - Atirar
+  - IniTutorial
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Inimigo
+  - Water
+  - UI
+  - Ground
+  - Bloco
+  - Itens cenario
+  - BlockCamera
+  - Camera
+  - Parede Inivisivel
+  - Enemie
+  - Foca
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
