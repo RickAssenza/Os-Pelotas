@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityStandardAssets.CrossPlatformInput;
+using UnityEngine.UI;
 public class JosecaTrem : MonoBehaviour
 {
     
+    
+    private int mundo2;
 
     private Animator playerAnimator;
 
@@ -16,6 +19,14 @@ public class JosecaTrem : MonoBehaviour
     public GameObject posicao3;
     public GameObject posicao4;
     public GameObject posicao5;
+    public GameObject posicao6;
+    public GameObject posicaoH1;
+    public GameObject posicaoH2;
+    public GameObject posicaoH3;
+    public GameObject posicaoH4;
+    public GameObject posicaoH5;
+    public GameObject posicaoH6;
+
 
     [SerializeField] private float speed;
 
@@ -29,6 +40,16 @@ public class JosecaTrem : MonoBehaviour
     public GameObject painel5;
     public GameObject painel6;
     public GameObject painelseisemeio;
+    public GameObject painel7;
+    public GameObject painel8;
+    public GameObject painel9;
+    public GameObject painel10;
+    public GameObject painel11;
+    public GameObject painel12;
+    public GameObject paineldozeemeio;
+    public GameObject painelHome;
+    public GameObject paineHome1;
+
 
     public GameController gameController;
 
@@ -37,7 +58,7 @@ public class JosecaTrem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
+        mundo2 = PlayerPrefs.GetInt("Troca");
         playerAnimator = GetComponent<Animator>();
         playerRb = GetComponent<Rigidbody2D>();
         gameController = FindObjectOfType(typeof(GameController)) as GameController;
@@ -46,23 +67,42 @@ public class JosecaTrem : MonoBehaviour
         switch (PlayerPrefs.GetInt("Spawn"))
         {
             case 2:
-                playerRb.transform.position = posicao1.transform.position;
-                break;
-            case 3:
                 playerRb.transform.position = posicao2.transform.position;
                 break;
-            case 4:
+            case 3:
                 playerRb.transform.position = posicao3.transform.position;
                 break;
-            case 5:
+            case 4:
                 playerRb.transform.position = posicao4.transform.position;
                 break;
+            case 5:
+                playerRb.transform.position = posicao5.transform.position;
+                break;
             case 6:
-                playerRb.transform.position = posicao5.transform.position;   
+                playerRb.transform.position = posicao6.transform.position;    
                 break;
             case 7:
                 playerRb.transform.position = posicao1.transform.position;
                 break;
+            case 14:
+                playerRb.transform.position = posicaoH1.transform.position;
+                break;
+            case 16:
+                playerRb.transform.position = posicaoH2.transform.position;
+                break;
+            case 11:
+                playerRb.transform.position = posicaoH3.transform.position;
+                break;
+            case 13:
+                playerRb.transform.position = posicaoH4.transform.position;
+                break;
+            case 17:
+                playerRb.transform.position = posicaoH5.transform.position;
+                break;
+            case 12:
+                playerRb.transform.position = posicaoH6.transform.position;
+                break;
+
         }
 
 
@@ -113,9 +153,10 @@ public class JosecaTrem : MonoBehaviour
         //playerAnimator.SetBool("IsGrouded", isGrounded);
 
 
-        touchRun = CrossPlatformInputManager.GetAxisRaw("Vertical"); ;
+        touchRun = CrossPlatformInputManager.GetAxisRaw("Vertical");
+       
 
-        if(touchRun < 0)
+        if (touchRun < 0)
         {
             playerAnimator.SetBool("Ré", true);
             playerAnimator.SetBool("1marcha", false);
@@ -191,6 +232,56 @@ public class JosecaTrem : MonoBehaviour
                 }
                 
                 break;
+
+            case "Fase7":
+                painel7.SetActive(true);
+                break;
+
+            case "Fase8":
+                painel8.SetActive(true);
+                break;
+            
+            case "Fase9":
+                painel9.SetActive(true);
+                break;
+
+            case "Fase10":
+                painel10.SetActive(true);
+                break;
+            
+            case "Fase11":
+                painel11.SetActive(true);
+                break;
+
+            case "Fase12":
+                if (PlayerPrefs.GetInt("qtdChaves") >= 10)
+                {
+                    painel12.SetActive(true);
+                }
+                else
+                {
+                    paineldozeemeio.SetActive(true);
+                }
+                break;
+
+            case "Trocador":
+
+                mundo2 = 1;
+                PlayerPrefs.SetInt("Troca", mundo2);
+
+                paineHome1.SetActive(true);
+                break;
+            
+            case "Trocador1":
+                if (PlayerPrefs.GetInt("Troca", mundo2) == 1)
+                {
+                    painelHome.SetActive(true);
+                }
+
+                break;
+
+
+
         }
     }
 
@@ -221,6 +312,53 @@ public class JosecaTrem : MonoBehaviour
             case "Fase6":
                 painel6.SetActive(false);
                 painelseisemeio.SetActive(false);
+                break;
+
+            case "Fase7":
+                painel7.SetActive(false);
+                break;
+
+            case "Fase8":
+                painel8.SetActive(false);
+                break;
+
+            case "Fase9":
+                painel9.SetActive(false);
+                break;
+
+            case "Fase10":
+                painel10.SetActive(false);
+                break;
+
+
+
+            case "Fase11":
+                painel11.SetActive(false);
+                break;
+
+            case "Fase12":
+                if (PlayerPrefs.GetInt("qtdChaves") >= 10)
+                {
+                    painel12.SetActive(false);
+                }
+                else
+                {
+                    paineldozeemeio.SetActive(false);
+                }
+                break;
+
+
+            case "Trocador":
+                
+                paineHome1.SetActive(false);
+                break;
+            
+            case "Trocador1":
+                if(PlayerPrefs.GetInt("Troca", mundo2) == 1)
+                {
+                    painelHome.SetActive(false);
+                }
+                
                 break;
 
         }

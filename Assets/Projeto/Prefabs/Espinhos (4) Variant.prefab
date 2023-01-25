@@ -67,6 +67,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Inimigo
       objectReference: {fileID: 0}
+    - target: {fileID: 6258045074423135150, guid: 9166d9f34abe55e448ba064850776159, type: 3}
+      propertyPath: m_SortingOrder
+      value: 107
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9166d9f34abe55e448ba064850776159, type: 3}
 --- !u!1 &2499859035373776570 stripped

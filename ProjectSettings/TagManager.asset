@@ -34,6 +34,19 @@ TagManager:
   - Placa
   - Atirar
   - IniTutorial
+  - Fase7
+  - Trocador
+  - Fase8
+  - Fase9
+  - Fase10
+  - Trocador1
+  - Placa2
+  - PortalUltimo
+  - Montanha
+  - Fase11
+  - Fase12
+  - Matadouro
+  - Placa3
   layers:
   - Default
   - TransparentFX
@@ -49,7 +62,7 @@ TagManager:
   - Parede Inivisivel
   - Enemie
   - Foca
-  - 
+  - espinho
   - 
   - 
   - 

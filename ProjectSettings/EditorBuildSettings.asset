@@ -35,4 +35,31 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Projeto/Scenes/Tutor.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Projeto/Scenes/Home 1.unity
+    guid: 3601f452a27f9b74bba2bf52abbb9ba0
+  - enabled: 1
+    path: Assets/Projeto/Scenes/7.unity
+    guid: 4c1dfd983e6aa844e80a64b6647b5300
+  - enabled: 1
+    path: Assets/Projeto/Scenes/8.unity
+    guid: 8048044a7d37c0b44a3e4f32461734f4
+  - enabled: 1
+    path: Assets/Projeto/Scenes/9.unity
+    guid: 38cc19ab3fb151d47bf3a96ae6d4b074
+  - enabled: 1
+    path: Assets/Projeto/Scenes/10.unity
+    guid: 9cfc8e8333a22e94ba895d10376f77dd
+  - enabled: 1
+    path: Assets/Projeto/Scenes/QuartoFliper.unity
+    guid: d85eb4eb950cb124c803fb9616615579
+  - enabled: 1
+    path: Assets/Projeto/Scenes/FaseAviao1.unity
+    guid: 810c4344a7c690c4fbb70dc8d9c06c92
+  - enabled: 1
+    path: Assets/Projeto/Scenes/FaseAviao2.unity
+    guid: 08ffcefb02164c34481b2004fb25a2c2
+  - enabled: 1
+    path: Assets/Projeto/Scenes/Final.unity
+    guid: cc4acb48863522944a29f6ac2f7cb0e0
   m_configObjects: {}

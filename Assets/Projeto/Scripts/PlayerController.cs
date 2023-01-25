@@ -9,13 +9,19 @@ using UnityStandardAssets.CrossPlatformInput;
 public class PlayerController : MonoBehaviour
 {
 
+    
+    
+    private Vbracao camerada;
+
     public MenuPause menu;
 
 
 
     public GameObject portal2;
-    
-    
+    public GameObject portalUltimo;
+
+
+
     //Vida
     public Color noHitColor;
     private bool playerInvencivel;
@@ -30,7 +36,7 @@ public class PlayerController : MonoBehaviour
 
     public GameObject tiro;
     public Transform arma;//onde sai o tiro.
-    private bool atirei;
+    public bool atirei;
     public float velocidadeTiro;
     public int tiros;
     public int minimoTios;
@@ -96,6 +102,7 @@ public class PlayerController : MonoBehaviour
         gameController = FindObjectOfType(typeof(GameController)) as GameController;
         srPlayer = GetComponent<SpriteRenderer>();
         menu = FindObjectOfType(typeof(MenuPause)) as MenuPause;
+        camerada = FindObjectOfType(typeof(Vbracao)) as Vbracao;
     }
 
     // Update is called once per frame
@@ -109,6 +116,8 @@ public class PlayerController : MonoBehaviour
         
 
         SetaMovimentos();
+
+
 
         if (CrossPlatformInputManager.GetButtonDown("Jump"))
         {
@@ -244,6 +253,7 @@ public class PlayerController : MonoBehaviour
 
             case "Inimigo":
 
+                
                 Rigidbody2D rigid = GetComponentInParent<Rigidbody2D>();
                 rigid.velocity = new Vector2(rigid.velocity.x, 0f);
                 rigid.AddForce(new Vector2(0f, 250));
@@ -274,7 +284,7 @@ public class PlayerController : MonoBehaviour
                 playerRb.transform.position = portal2.transform.position; break;
 
             case "Portal3":
-                SceneManager.LoadScene("Fase6,2"); break;
+                SceneManager.LoadScene("QuartoFliper"); break;
 
 
             case "Boss":
@@ -302,6 +312,24 @@ public class PlayerController : MonoBehaviour
                 
                 break;
 
+            case "Placa2":
+
+
+                SceneManager.LoadScene("QuartoFliper");
+
+                break;
+
+            case "Placa3":
+
+
+                SceneManager.LoadScene("Final");
+
+           
+                break;
+            
+            case "PortalUltimo":
+                playerRb.transform.position = portalUltimo.transform.position; break;
+
 
         }
     }
@@ -319,7 +347,7 @@ public class PlayerController : MonoBehaviour
                 break;
 
             case "Inimigo":
-
+                Vbracao.instance.Shake();
                 Destroy(collision.gameObject);
                 Hurt(); 
                 
@@ -339,6 +367,15 @@ public class PlayerController : MonoBehaviour
                 rigidib.velocity = new Vector2(rigidib.velocity.x, 0f);
                 rigidib.AddForce(new Vector2(0f, 400));
                 Hurt();
+                break;
+
+
+            case "Matadouro":
+                gameObject.SetActive(false);
+
+                GameObject tempExplosion = Instantiate(fumacaRoxa, transform.position, transform.localRotation);
+                Destroy(tempExplosion, 0.5f);
+                Invoke("CarregaJogo", 2f);
                 break;
         }
     }
@@ -431,8 +468,14 @@ public class PlayerController : MonoBehaviour
         playerInvencivel = false;
     }
 
+    public void Vida()
+    {
+        vida = 3;
+        barravida.sprite = spriteVida[vida];
+        gameController.score = gameController.score - 10;
+        gameController.painelVida.SetActive(false);
+    }
 
-  
 
 }
 
